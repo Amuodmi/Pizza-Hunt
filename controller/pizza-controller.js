@@ -2,7 +2,6 @@ const { Pizza } = require('../models');
 
 const pizzaController = {
     //get all pizzas:
-
     getAllPizza(req, res) {
         Pizza.find({})
         .then(dbPizzaData => res.json(dbPizzaData))
@@ -14,6 +13,7 @@ const pizzaController = {
 
     //get one pizza by ID: 
     getPizzaById({ params }, res){
+      Pizza.findOne({_id: params.id})
         .then(dbPizzaData => {
             //If no pizza is found, send 404
         if (!dbPizzaData){
@@ -21,7 +21,7 @@ const pizzaController = {
             return;
         }
         res.json(dbPizzaData);
-        });
+        })
         .catch(err => {
             console.log(err);
             res.status(400).json(err);
