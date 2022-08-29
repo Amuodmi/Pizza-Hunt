@@ -16,9 +16,9 @@ router
 
 //Set up GET one, PUT, and DELETE at /api/pizzas/:id
 router
-.route(':/id')
-.get(getPizzaById)
-.put(updatePizza)
-.delete(deletePizza);
+  .route('/:id')
+  .get(getPizzaById)
+  .put(updatePizza)
+  .delete(deletePizza);
 
 module.exports = router; 
