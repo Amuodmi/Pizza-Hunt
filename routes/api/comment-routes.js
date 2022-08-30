@@ -3,7 +3,7 @@ const { addComment, removeComment } = require('../../controllers/comment-control
 
 
 // api/comments/<pizzaId>
-router.route('/:pizzaID').post(addComment);
+router.route('/:pizzaId').post(addComment);
 
 //  /api/comments/<pizzaId>/<commentId>
 router.route('/:pizzaId/:commentId').delete(removeComment);

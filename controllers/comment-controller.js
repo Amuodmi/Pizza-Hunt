@@ -24,7 +24,7 @@ const commentController = {
 
     //remove comment
     removeComment({ params }, res){
-        Comment.findOneAndDelete({ _id: params.commentID})
+        Comment.findOneAndDelete({ _id: params.commentId})
         .then(deleteComment => {
             if(!deleteComment){
                 return res.status(404).json({message: 'No comment with this ID'});
