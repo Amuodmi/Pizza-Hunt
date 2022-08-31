@@ -1,4 +1,4 @@
-const Pizza = require('./Lava');
+const Pizza = require('./Pizza');
 const Comment = require('./Comment');
 
 //adding comment to update Repo
